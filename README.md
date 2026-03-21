@@ -8,4 +8,4 @@ Vendez votre bien immobilier rapidement grâce à notre agence à Marseille. Est
 
 [Visitez le site L'Agence](https://meline-p.github.io/l-agence/)
 
-![img](https://meline-p.github.io/l-agence/img/desktop.png)
+![img](https://meline-p.github.io/l-agence/img/desktop-lagence.png)
