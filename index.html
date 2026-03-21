@@ -10,28 +10,69 @@
     <title>L'Agence</title>
 
     <!-- CSS - Tailwind - FontAwesome -->
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"
+      defer
+    ></script>
     <link
-      rel="stylesheet"
+      rel="preload"
+      href="style.css"
+      as="style"
+      onload="
+        this.onload = null;
+        this.rel = 'stylesheet';
+      "
+    />
+    <noscript><link rel="stylesheet" href="style.css" /></noscript>
+    <link
+      rel="preload"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      as="style"
+      onload="
+        this.onload = null;
+        this.rel = 'stylesheet';
+      "
       integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <noscript>
+      <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+      />
+    </noscript>
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
+      rel="preload"
+      as="style"
       href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-      rel="stylesheet"
+      onload="
+        this.onload = null;
+        this.rel = 'stylesheet';
+      "
     />
+    <noscript>
+      <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet"
+      />
+    </noscript>
   </head>
   <body>
     <div class="container">
       <div class="fixed bottom-4 left-4 right-4 z-40 mx-auto lg:hidden">
-        <a href="#cta" class="gold-btn text-center p-4 block rounded-4xl">
+        <a
+          href="#cta"
+          class="gold-btn text-center p-4 block rounded-4xl"
+          aria-label="Estimation gratuite"
+        >
           Estimation gratuite
         </a>
       </div>
@@ -43,7 +84,7 @@
       <div class="flex justify-between items-center">
         <!-- Logo -->
         <div>
-          <a href="#">
+          <a href="#" aria-label="L'Agence">
             <h2 class="font-brand-clamp">
               L'Agence<span class="text-gold">.</span>
             </h2>
@@ -52,19 +93,36 @@
 
         <!-- Menu desktop -->
         <nav class="hidden lg:flex gap-8 uppercase text-xl items-center">
-          <a class="hover:text-gold" href="#real-estate">Biens Immobiliers</a>
-          <a class="hover:text-gold" href="#services">Services</a>
-          <a class="hover:text-gold" href="#testimonials">Avis</a>
-          <a class="hover:text-gold" href="#cta">Contact</a>
+          <a
+            class="hover:text-gold"
+            aria-label="Biens Immobiliers"
+            href="#real-estate"
+            >Biens Immobiliers</a
+          >
+          <a class="hover:text-gold" aria-label="Services" href="#services"
+            >Services</a
+          >
+          <a class="hover:text-gold" aria-label="Avis" href="#testimonials"
+            >Avis</a
+          >
+          <a class="hover:text-gold" aria-label="Contact" href="#cta"
+            >Contact</a
+          >
         </nav>
 
         <!-- Bouton desktop -->
         <div class="hidden lg:block">
-          <a href="#cta" class="dark-blue-btn">Estimation gratuite</a>
+          <a href="#cta" class="dark-blue-btn" aria-label="Estimation gratuite"
+            >Estimation gratuite</a
+          >
         </div>
 
         <!-- Hamburger mobile -->
-        <button id="menu-btn" class="lg:hidden text-3xl">
+        <button
+          id="menu-btn"
+          class="lg:hidden text-3xl"
+          aria-label="Menu mobile"
+        >
           <i class="fa-solid fa-bars text-dark-blue"></i>
         </button>
       </div>
@@ -74,497 +132,581 @@
         id="mobile-menu"
         class="hidden flex flex-col gap-6 mt-6 uppercase text-lg lg:hidden"
       >
-        <a class="hover:text-gold" href="#real-estate">Biens Immobiliers</a>
-        <a class="hover:text-gold" href="#services">Services</a>
-        <a class="hover:text-gold" href="#testimonials">Avis</a>
-        <a class="hover:text-gold" href="#cta">Contact</a>
+        <a
+          class="hover:text-gold"
+          aria-label="Biens Immobiliers"
+          href="#real-estate"
+          >Biens Immobiliers</a
+        >
+        <a class="hover:text-gold" aria-label="Services" href="#services"
+          >Services</a
+        >
+        <a class="hover:text-gold" aria-label="Avis" href="#testimonials"
+          >Avis</a
+        >
+        <a class="hover:text-gold" aria-label="Contact" href="#cta">Contact</a>
       </div>
     </header>
 
-    <!-- HERO -->
-    <section class="hero hero-bg-img md:h-dvh min-h-screen md:py-0 py-20">
-      <div class="container min-h-screen flex flex-col justify-center">
-        <div class="flex flex-col justify-center items-center text-center">
-          <h1 class="font-h1-clamp pb-6">
-            Vendez votre bien immobilier
-            <span class="text-gold">rapidement et au meilleur prix.</span>
-          </h1>
+    <main>
+      <!-- HERO -->
+      <section
+        class="hero hero-bg-img md:h-dvh min-h-screen md:py-0 py-20"
+        aria-label="Hero"
+      >
+        <div class="container min-h-screen flex flex-col justify-center">
+          <div class="flex flex-col justify-center items-center text-center">
+            <h1 class="font-h1-clamp pb-6">
+              Vendez votre bien immobilier
+              <span class="text-gold">rapidement et au meilleur prix.</span>
+            </h1>
 
-          <p class="md:text-2xl text-md text-white">
-            Notre agence vous accompagne à chaque étape de votre projet
-            immobilier, de l’estimation à la signature chez le notaire.
-          </p>
-        </div>
-
-        <div
-          class="w-full bg-white flex md:flex-row flex-col gap-8 py-6 px-10 md:rounded-full rounded-2xl mt-10"
-        >
-          <div class="grow flex flex-col">
-            <label class="uppercase text-slate mb-2">Ville</label>
-            <input
-              type="text"
-              placeholder="Entrez votre ville"
-              class="w-full px-4 py-2 rounded-full shadow-sm focus:ring-2 focus:ring-dark-blue"
-            />
-          </div>
-
-          <div class="grow flex flex-col">
-            <label class="uppercase text-slate mb-2">Budget</label>
-            <select
-              class="w-full px-4 py-2 rounded-full shadow-sm focus:ring-2 focus:ring-dark-blue bg-white"
-            >
-              <option>Moins de 500 000</option>
-              <option>De 500 000 à 1M</option>
-              <option>Plus de 1M</option>
-            </select>
-          </div>
-
-          <div class="">
-            <a
-              href="#real-estate"
-              class="gold-btn md:py-6 py-2 px-6 md:px-10 md:rounded-full rounded-2xl block text-center"
-            >
-              Rechercher
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- CHIFFRES -->
-    <section class="numbers py-40">
-      <div class="container">
-        <div
-          class="flex justify-center flex-wrap md:flex-nowrap items-center gap-8 w-full"
-        >
-          <div
-            class="bg-white shadow-lg p-8 rounded-4xl flex justify-center flex-col items-center w-full"
-          >
-            <p class="text-4xl font-bold mb-2">12+</p>
-            <p class="uppercase text-slate">Années d'Expérience</p>
-          </div>
-
-          <div
-            class="bg-white shadow-lg p-8 rounded-4xl flex justify-center flex-col items-center text-gold w-full"
-          >
-            <p class="text-4xl font-bold mb-2">450</p>
-            <p class="uppercase">Ventes de Prestige</p>
-          </div>
-
-          <div
-            class="bg-white shadow-lg p-8 rounded-4xl flex justify-center flex-col items-center w-full"
-          >
-            <p class="text-4xl font-bold mb-2">98%</p>
-            <p class="uppercase text-slate">Clients satisfaits</p>
-          </div>
-
-          <div
-            class="bg-white shadow-lg p-8 rounded-4xl flex justify-center flex-col items-center text-gold w-full"
-          >
-            <p class="text-4xl font-bold mb-2">1.2M</p>
-            <p class="uppercase">Volume de ventes</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- BIENS IMMOBILIERS -->
-    <section id="real-estate" class="real-estate border-t-1 border-gold py-40">
-      <div class="container">
-        <div>
-          <div>
-            <h2 class="font-h2-clamp">
-              LA COLLECTION <span class="text-gold">PRIVATE.</span>
-            </h2>
-            <p>
-              Une sélection rigoureuse des biens les plus rares du marché de la
-              côte d'azur.
+            <p class="md:text-2xl text-md text-white">
+              Notre agence vous accompagne à chaque étape de votre projet
+              immobilier, de l’estimation à la signature chez le notaire.
             </p>
           </div>
-          <div class="flex xl:flex-row flex-col gap-8 my-10">
-            <!-- Immo 1 -->
-            <div
-              class="flex xl:flex-row flex-col rounded-4xl bg-white shadow-lg xl:w-1/2 w-full overflow-hidden"
-            >
-              <div class="xl:w-1/2 w-full">
-                <img
-                  class="h-full w-full object-cover xl:rounded-l-4xl rounded-b-4xl"
-                  src="img/design-south-house.avif"
-                  alt="Villa St Barth"
-                />
-              </div>
-              <div class="xl:w-1/2 w-full p-8 flex flex-col gap-4">
-                <p class="text-gold uppercase tracking-widest text-sm">
-                  Marseille
-                </p>
-                <h3 class="font-h3-clamp">Villa St Barth</h3>
-                <p class="text-slate">
-                  Une architecture suspendue entre ciel et mer, offrant une vue
-                  panoramique à 360° sur la baie.
-                </p>
-                <p class="font-bold italic text-2xl">8 000 000€</p>
-                <div>
-                  <a href="#real-estate" class="gold-btn py-2 px-4 rounded-lg"
-                    >Détails <i class="fa-solid fa-arrow-right"></i
-                  ></a>
-                </div>
-              </div>
+
+          <div
+            class="w-full bg-white flex md:flex-row flex-col gap-8 py-6 px-10 md:rounded-full rounded-2xl mt-10"
+          >
+            <div class="grow flex flex-col">
+              <label class="uppercase text-slate mb-2" for="city">Ville</label>
+              <input
+                id="city"
+                type="text"
+                placeholder="Entrez votre ville"
+                class="w-full px-4 py-2 rounded-full shadow-sm focus:ring-2 focus:ring-dark-blue"
+              />
             </div>
 
-            <!-- Immo 2 -->
-            <div
-              class="flex xl:flex-row flex-col rounded-4xl bg-white shadow-lg xl:w-1/2 w-full overflow-hidden"
-            >
-              <div class="xl:w-1/2 w-full">
-                <img
-                  class="h-full w-full object-cover xl:rounded-l-4xl rounded-b-4xl"
-                  src="img/white-house.avif"
-                  alt="Villa Vue mer"
-                />
-              </div>
-              <div class="xl:w-1/2 w-full p-8 flex flex-col gap-4">
-                <p class="text-gold uppercase tracking-widest text-sm">
-                  Cassis
-                </p>
-                <h3 class="font-h3-clamp">Villa Vue Mer</h3>
-                <p class="text-slate">
-                  Une architecture suspendue entre ciel et mer, offrant une vue
-                  panoramique à 360° sur la baie.
-                </p>
-                <p class="font-bold italic text-2xl">6 500 000€</p>
-                <div>
-                  <a href="#real-estate" class="gold-btn py-2 px-4 rounded-lg"
-                    >Détails <i class="fa-solid fa-arrow-right"></i
-                  ></a>
-                </div>
-              </div>
+            <div class="grow flex flex-col">
+              <label class="uppercase text-slate mb-2" for="budget"
+                >Budget</label
+              >
+              <select
+                id="budget"
+                class="w-full px-4 py-2 rounded-full shadow-sm focus:ring-2 focus:ring-dark-blue bg-white"
+              >
+                <option>Moins de 500 000</option>
+                <option>De 500 000 à 1M</option>
+                <option>Plus de 1M</option>
+              </select>
             </div>
-          </div>
-          <div class="text-center mt-20">
-            <div>
-              <a href="#real-estate" class="dark-blue-btn"
-                >Voir tous les biens
+
+            <div class="">
+              <a
+                href="#real-estate"
+                class="gold-btn md:py-6 py-2 px-6 md:px-10 md:rounded-full rounded-2xl block text-center"
+                aria-label="Rechercher"
+              >
+                Rechercher
               </a>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- SERVICES -->
-    <section id="services" class="services bg-dark-blue text-white py-40">
-      <div class="container">
-        <div>
-          <div class="mb-10">
-            <h2 class="font-h2-clamp">
-              Nos <span class="text-gold">services</span> immobiliers
-            </h2>
-            <p>
-              Nous vous accompagnons dans toutes les étapes de votre projet
-              immobilier afin de vous garantir une vente simple, rapide et
-              sécurisée.
-            </p>
+      <!-- CHIFFRES -->
+      <section class="numbers py-40" aria-label="Chiffres">
+        <div class="container">
+          <div
+            class="flex justify-center flex-wrap md:flex-nowrap items-center gap-8 w-full"
+          >
+            <div
+              class="bg-white shadow-lg p-8 rounded-4xl flex justify-center flex-col items-center w-full"
+            >
+              <p class="text-4xl font-bold mb-2">12+</p>
+              <p class="uppercase text-slate">Années d'Expérience</p>
+            </div>
+
+            <div
+              class="bg-white shadow-lg p-8 rounded-4xl flex justify-center flex-col items-center text-gold w-full"
+            >
+              <p class="text-4xl font-bold mb-2">450</p>
+              <p class="uppercase">Ventes de Prestige</p>
+            </div>
+
+            <div
+              class="bg-white shadow-lg p-8 rounded-4xl flex justify-center flex-col items-center w-full"
+            >
+              <p class="text-4xl font-bold mb-2">98%</p>
+              <p class="uppercase text-slate">Clients satisfaits</p>
+            </div>
+
+            <div
+              class="bg-white shadow-lg p-8 rounded-4xl flex justify-center flex-col items-center text-gold w-full"
+            >
+              <p class="text-4xl font-bold mb-2">1.2M</p>
+              <p class="uppercase">Volume de ventes</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- BIENS IMMOBILIERS -->
+      <section
+        id="real-estate"
+        class="real-estate border-t-1 border-gold py-40"
+        aria-label="Biens immobiliers"
+      >
+        <div class="container">
+          <div>
+            <div>
+              <h2 class="font-h2-clamp">
+                LA COLLECTION <span class="text-gold">PRIVATE.</span>
+              </h2>
+              <p>
+                Une sélection rigoureuse des biens les plus rares du marché de
+                la côte d'azur.
+              </p>
+            </div>
+            <div class="flex xl:flex-row flex-col gap-8 my-10">
+              <!-- Immo 1 -->
+              <div
+                class="flex xl:flex-row flex-col rounded-4xl bg-white shadow-lg xl:w-1/2 w-full overflow-hidden"
+              >
+                <div class="xl:w-1/2 w-full">
+                  <img
+                    class="h-full w-full object-cover xl:rounded-l-4xl rounded-b-4xl aspect-[3/2]"
+                    src="img/design-south-house.avif"
+                    alt="Villa St Barth"
+                    width="860"
+                    height="646"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="xl:w-1/2 w-full p-8 flex flex-col gap-4">
+                  <p class="text-gold uppercase tracking-widest text-sm">
+                    Marseille
+                  </p>
+                  <h3 class="font-h3-clamp">Villa St Barth</h3>
+                  <p class="text-slate">
+                    Une architecture suspendue entre ciel et mer, offrant une
+                    vue panoramique à 360° sur la baie.
+                  </p>
+                  <p class="font-bold italic text-2xl">8 000 000€</p>
+                  <div>
+                    <a
+                      href="#real-estate"
+                      class="gold-btn py-2 px-4 rounded-lg"
+                      aria-label="Détails"
+                      >Détails <i class="fa-solid fa-arrow-right"></i
+                    ></a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Immo 2 -->
+              <div
+                class="flex xl:flex-row flex-col rounded-4xl bg-white shadow-lg xl:w-1/2 w-full overflow-hidden"
+              >
+                <div class="xl:w-1/2 w-full">
+                  <img
+                    class="h-full w-full object-cover xl:rounded-l-4xl rounded-b-4xl aspect-[3/2]"
+                    src="img/white-house.avif"
+                    alt="Villa Vue mer"
+                    width="969"
+                    height="646"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="xl:w-1/2 w-full p-8 flex flex-col gap-4">
+                  <p class="text-gold uppercase tracking-widest text-sm">
+                    Cassis
+                  </p>
+                  <h3 class="font-h3-clamp">Villa Vue Mer</h3>
+                  <p class="text-slate">
+                    Une architecture suspendue entre ciel et mer, offrant une
+                    vue panoramique à 360° sur la baie.
+                  </p>
+                  <p class="font-bold italic text-2xl">6 500 000€</p>
+                  <div>
+                    <a
+                      href="#real-estate"
+                      class="gold-btn py-2 px-4 rounded-lg"
+                      aria-label="Détails"
+                      >Détails <i class="fa-solid fa-arrow-right"></i
+                    ></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="text-center mt-20">
+              <div>
+                <a
+                  href="#real-estate"
+                  class="dark-blue-btn"
+                  aria-label="Voir tous les biens"
+                  >Voir tous les biens
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SERVICES -->
+      <section
+        id="services"
+        class="services bg-dark-blue text-white py-40"
+        aria-label="Services"
+      >
+        <div class="container">
+          <div>
+            <div class="mb-10">
+              <h2 class="font-h2-clamp">
+                Nos <span class="text-gold">services</span> immobiliers
+              </h2>
+              <p>
+                Nous vous accompagnons dans toutes les étapes de votre projet
+                immobilier afin de vous garantir une vente simple, rapide et
+                sécurisée.
+              </p>
+            </div>
+
+            <div
+              class="flex xl:flex-row flex-col justify-center items-stretch gap-8"
+            >
+              <!-- Colonne des services -->
+              <div class="flex flex-col gap-8 my-10 xl:w-2/3 w-full">
+                <!-- Chaque service -->
+                <div class="flex items-start gap-6">
+                  <div class="border border-gold rounded-xl p-4">
+                    <i class="text-xl text-gold fa-solid fa-money-bills"></i>
+                  </div>
+                  <div>
+                    <h3 class="font-h3-clamp">Estimation de votre bien</h3>
+                    <p class="text-light-slate">
+                      Obtenez une estimation précise de votre bien immobilier
+                      basée sur l’analyse du marché local, les biens récemment
+                      vendus et les caractéristiques spécifiques de votre
+                      propriété.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="flex items-start gap-6">
+                  <div class="border border-gold rounded-xl p-4">
+                    <i class="text-xl text-gold fa-solid fa-star"></i>
+                  </div>
+                  <div>
+                    <h3 class="font-h3-clamp">Mise en valeur de votre bien</h3>
+                    <p class="text-light-slate">
+                      Nous valorisons votre bien grâce à des photos
+                      professionnelles, une annonce attractive et une diffusion
+                      sur les principaux portails immobiliers afin d’attirer un
+                      maximum d’acheteurs.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="flex items-start gap-6">
+                  <div class="border border-gold rounded-xl p-4">
+                    <i class="text-xl text-gold fa-solid fa-key"></i>
+                  </div>
+                  <div>
+                    <h3 class="font-h3-clamp">Gestion des visites</h3>
+                    <p class="text-light-slate">
+                      Nous organisons et réalisons les visites avec des
+                      acheteurs qualifiés afin d’optimiser vos chances de vendre
+                      rapidement.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="flex items-start gap-6">
+                  <div class="border border-gold rounded-xl p-4">
+                    <i class="text-xl text-gold fa-solid fa-comments"></i>
+                  </div>
+                  <div>
+                    <h3 class="font-h3-clamp">Négociation et accompagnement</h3>
+                    <p class="text-light-slate">
+                      Notre équipe vous accompagne jusqu’à la signature chez le
+                      notaire et gère les négociations pour obtenir le meilleur
+                      prix pour votre bien.
+                    </p>
+                  </div>
+                </div>
+                <div class="text-center md:hidden inline-block">
+                  <a
+                    href="#cta"
+                    class="gold-to-slate-btn py-2 px-4 rounded-lg"
+                    aria-label="Estimation gratuite"
+                    >Estimation gratuite
+                  </a>
+                </div>
+                <div class="text-center md:inline-block hidden">
+                  <a
+                    href="#cta"
+                    class="gold-to-slate-btn py-2 px-4 rounded-lg"
+                    aria-label="Demander une estimation gratuite"
+                    >Demander une estimation gratuite
+                  </a>
+                </div>
+              </div>
+
+              <!-- Colonne image -->
+              <div class="xl:w-1/3 w-full flex">
+                <img
+                  class="h-full w-full object-cover rounded-4xl aspect-[3/2]"
+                  src="img/key.avif"
+                  loading="lazy"
+                  width="969"
+                  height="646"
+                  alt="Clé"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- AVIS -->
+      <section
+        id="testimonials"
+        class="testimonials py-40 relative"
+        aria-label="Avis"
+      >
+        <div class="container relative">
+          <!-- Témoignages -->
+          <div id="testimonial-wrapper" class="overflow-hidden relative">
+            <div
+              class="testimonial-slide transition-transform duration-500 ease-in-out"
+            >
+              <p class="text-6xl text-gold">
+                <i class="fa-solid fa-quote-left"></i>
+              </p>
+              <p
+                class="text-center md:text-4xl text-2xl italic font-bold mt-6 px-8"
+              >
+                Nous avons vendu notre villa en moins de trois semaines grâce à
+                l’agence. L’équipe est professionnelle, disponible et très
+                efficace.
+              </p>
+              <p class="font-bold text-center mt-10">- Sophie M.</p>
+            </div>
+            <div class="testimonial-slide hidden">
+              <p class="text-6xl text-gold">
+                <i class="fa-solid fa-quote-left"></i>
+              </p>
+              <p
+                class="text-center md:text-4xl text-2xl italic font-bold mt-6 px-8"
+              >
+                Excellent suivi, équipe très réactive et conseils précieux pour
+                la vente de notre maison.
+              </p>
+              <p class="font-bold text-center mt-10">- Julien D.</p>
+            </div>
+            <div class="testimonial-slide hidden">
+              <p class="text-6xl text-gold">
+                <i class="fa-solid fa-quote-left"></i>
+              </p>
+              <p
+                class="text-center md:text-4xl text-2xl italic font-bold mt-6 px-8"
+              >
+                L’expérience a été impeccable. Vente rapide et accompagnement
+                complet du début à la fin.
+              </p>
+              <p class="font-bold text-center mt-10">- Marie L.</p>
+            </div>
           </div>
 
-          <div
-            class="flex xl:flex-row flex-col justify-center items-stretch gap-8"
+          <!-- Flèches -->
+          <button
+            id="prev"
+            class="absolute left-0 top-1/2 -translate-y-1/2 text-4xl text-gold"
+            aria-label="Avis précédent"
           >
-            <!-- Colonne des services -->
-            <div class="flex flex-col gap-8 my-10 xl:w-2/3 w-full">
-              <!-- Chaque service -->
-              <div class="flex items-start gap-6">
-                <div class="border border-gold rounded-xl p-4">
-                  <i class="text-xl text-gold fa-solid fa-money-bills"></i>
-                </div>
-                <div>
-                  <h3 class="font-h3-clamp">Estimation de votre bien</h3>
-                  <p class="text-slate">
-                    Obtenez une estimation précise de votre bien immobilier
-                    basée sur l’analyse du marché local, les biens récemment
-                    vendus et les caractéristiques spécifiques de votre
-                    propriété.
-                  </p>
+            <i class="fa-solid fa-chevron-left"></i>
+          </button>
+          <button
+            id="next"
+            class="absolute right-0 top-1/2 -translate-y-1/2 text-4xl text-gold"
+            aria-label="Avis suivant"
+          >
+            <i class="fa-solid fa-chevron-right"></i>
+          </button>
+
+          <!-- Ronds -->
+          <div id="dots" class="flex justify-center gap-3 mt-6">
+            <span
+              class="dot w-4 h-4 rounded-full bg-gray-400 cursor-pointer"
+            ></span>
+            <span
+              class="dot w-4 h-4 rounded-full bg-gray-400 cursor-pointer"
+            ></span>
+            <span
+              class="dot w-4 h-4 rounded-full bg-gray-400 cursor-pointer"
+            ></span>
+          </div>
+        </div>
+      </section>
+
+      <!-- A PROPOS -->
+      <section
+        id="about"
+        class="about bg-dark-blue text-white py-40"
+        aria-label="A propos"
+      >
+        <div class="container">
+          <div class="flex lg:flex-row flex-col items-center gap-10">
+            <div class="lg:w-1/2 w-full">
+              <img
+                class="h-full w-full rounded-4xl aspect-[3/2]"
+                src="img/team.avif"
+                alt="à propos"
+                width="969"
+                height="646"
+                loading="lazy"
+              />
+            </div>
+            <div class="lg:w-1/2 w-full flex flex-col gap-6">
+              <h2 class="font-h2-clamp">
+                Une <span class="text-gold">équipe locale</span> à votre écoute
+              </h2>
+              <p>
+                Notre agence immobilière accompagne les propriétaires et les
+                acheteurs dans leurs projets immobiliers depuis plusieurs
+                années.
+              </p>
+
+              <p>
+                <span class="font-bold">Notre mission est simple</span> : vous
+                offrir un accompagnement personnalisé, transparent et efficace
+                afin de concrétiser votre projet dans les meilleures conditions.
+              </p>
+
+              <p>
+                Grâce à notre parfaite connaissance du marché local et à notre
+                réseau d’acquéreurs qualifiés, nous mettons tout en œuvre pour
+                vendre votre bien rapidement et au meilleur prix.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ -->
+      <section class="faq py-40" aria-label="FAQ">
+        <div class="container">
+          <div>
+            <div class="mb-10">
+              <h2 class="font-h2-clamp">FAQ<span class="text-gold">.</span></h2>
+            </div>
+            <!-- Accordeons -->
+            <div class="space-y-4">
+              <!-- Question 1 -->
+              <div class="faq-item border-b border-slate">
+                <button
+                  class="faq-question w-full text-left py-4 flex justify-between items-center font-medium text-lg"
+                  aria-label="Combien coûte une estimation immobilière ?"
+                >
+                  Combien coûte une estimation immobilière ?
+                  <span class="faq-icon text-gold">+</span>
+                </button>
+                <div
+                  class="faq-answer max-h-0 overflow-hidden transition-all duration-300 text-slate"
+                >
+                  L’estimation de votre bien est totalement gratuite et sans
+                  engagement.
                 </div>
               </div>
 
-              <div class="flex items-start gap-6">
-                <div class="border border-gold rounded-xl p-4">
-                  <i class="text-xl text-gold fa-solid fa-star"></i>
-                </div>
-                <div>
-                  <h3 class="font-h3-clamp">Mise en valeur de votre bien</h3>
-                  <p class="text-slate">
-                    Nous valorisons votre bien grâce à des photos
-                    professionnelles, une annonce attractive et une diffusion
-                    sur les principaux portails immobiliers afin d’attirer un
-                    maximum d’acheteurs.
-                  </p>
-                </div>
-              </div>
-
-              <div class="flex items-start gap-6">
-                <div class="border border-gold rounded-xl p-4">
-                  <i class="text-xl text-gold fa-solid fa-key"></i>
-                </div>
-                <div>
-                  <h3 class="font-h3-clamp">Gestion des visites</h3>
-                  <p class="text-slate">
-                    Nous organisons et réalisons les visites avec des acheteurs
-                    qualifiés afin d’optimiser vos chances de vendre rapidement.
-                  </p>
+              <!-- Question 2 -->
+              <div class="faq-item border-b border-slate">
+                <button
+                  class="faq-question w-full text-left py-4 flex justify-between items-center font-medium text-lg"
+                  aria-label="Combien de temps faut-il pour vendre un bien ?"
+                >
+                  Combien de temps faut-il pour vendre un bien ?
+                  <span class="faq-icon text-gold">+</span>
+                </button>
+                <div
+                  class="faq-answer max-h-0 overflow-hidden transition-all duration-300 text-slate"
+                >
+                  Le délai de vente dépend du marché et du prix du bien, mais la
+                  plupart de nos biens se vendent entre 30 et 60 jours.
                 </div>
               </div>
 
-              <div class="flex items-start gap-6">
-                <div class="border border-gold rounded-xl p-4">
-                  <i class="text-xl text-gold fa-solid fa-comments"></i>
-                </div>
-                <div>
-                  <h3 class="font-h3-clamp">Négociation et accompagnement</h3>
-                  <p class="text-slate">
-                    Notre équipe vous accompagne jusqu’à la signature chez le
-                    notaire et gère les négociations pour obtenir le meilleur
-                    prix pour votre bien.
-                  </p>
+              <!-- Question 3 -->
+              <div class="faq-item border-b border-slate">
+                <button
+                  class="faq-question w-full text-left py-4 flex justify-between items-center font-medium text-lg"
+                  aria-label=" Dois-je être présent lors des visites ?"
+                >
+                  Dois-je être présent lors des visites ?
+                  <span class="faq-icon text-gold">+</span>
+                </button>
+                <div
+                  class="faq-answer max-h-0 overflow-hidden transition-all duration-300 text-slate"
+                >
+                  Non, notre équipe peut gérer les visites pour vous afin de
+                  faciliter l’organisation et de qualifier les acheteurs.
                 </div>
               </div>
-              <div class="text-center md:hidden inline-block">
-                <a href="#cta" class="gold-to-slate-btn py-2 px-4 rounded-lg"
+
+              <!-- Question 4 -->
+              <div class="faq-item border-b border-slate">
+                <button
+                  class="faq-question w-full text-left py-4 flex justify-between items-center font-medium text-lg"
+                  aria-label="Sur quels sites mon bien sera-t-il diffusé ?"
+                >
+                  Sur quels sites mon bien sera-t-il diffusé ?
+                  <span class="faq-icon text-gold">+</span>
+                </button>
+                <div
+                  class="faq-answer max-h-0 overflow-hidden transition-all duration-300 text-slate"
+                >
+                  Votre bien sera diffusé sur les principaux portails
+                  immobiliers afin de maximiser sa visibilité.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA -->
+      <section
+        id="cta"
+        class="cta bg-dark-blue text-white py-40"
+        aria-label="Contact"
+      >
+        <div class="container">
+          <div>
+            <div class="flex justify-center flex-col items-center">
+              <h2 class="font-h2-clamp text-center">
+                Vous souhaitez
+                <span class="text-gold">vendre votre bien</span>
+                immobilier ?
+              </h2>
+              <p class="text-center">
+                Contactez notre agence dès aujourd’hui pour obtenir une
+                estimation gratuite et découvrir la valeur de votre bien.
+              </p>
+              <div class="mt-10 text-center md:hidden inline-block">
+                <a
+                  href="#cta"
+                  class="gold-to-slate-btn py-2 px-4 rounded-lg"
+                  aria-label="Estimation gratuite"
                   >Estimation gratuite
                 </a>
               </div>
-              <div class="text-center md:inline-block hidden">
-                <a href="#cta" class="gold-to-slate-btn py-2 px-4 rounded-lg"
+              <div class="mt-10 text-center md:inline-block hidden">
+                <a
+                  href="#cta"
+                  class="gold-to-slate-btn py-2 px-4 rounded-lg"
+                  aria-label="Demander une estimation gratuite"
                   >Demander une estimation gratuite
                 </a>
               </div>
             </div>
-
-            <!-- Colonne image -->
-            <div class="xl:w-1/3 w-full flex">
-              <img
-                class="h-full w-full object-cover rounded-4xl"
-                src="img/key.avif"
-                alt="Clé"
-              />
-            </div>
           </div>
         </div>
-      </div>
-    </section>
-
-    <!-- AVIS -->
-    <section id="testimonials" class="testimonials py-40 relative">
-      <div class="container relative">
-        <!-- Témoignages -->
-        <div id="testimonial-wrapper" class="overflow-hidden relative">
-          <div
-            class="testimonial-slide transition-transform duration-500 ease-in-out"
-          >
-            <p class="text-6xl text-gold">
-              <i class="fa-solid fa-quote-left"></i>
-            </p>
-            <p
-              class="text-center md:text-4xl text-2xl italic font-bold mt-6 px-8"
-            >
-              Nous avons vendu notre villa en moins de trois semaines grâce à
-              l’agence. L’équipe est professionnelle, disponible et très
-              efficace.
-            </p>
-            <p class="font-bold text-center mt-10">- Sophie M.</p>
-          </div>
-          <div class="testimonial-slide hidden">
-            <p class="text-6xl text-gold">
-              <i class="fa-solid fa-quote-left"></i>
-            </p>
-            <p
-              class="text-center md:text-4xl text-2xl italic font-bold mt-6 px-8"
-            >
-              Excellent suivi, équipe très réactive et conseils précieux pour la
-              vente de notre maison.
-            </p>
-            <p class="font-bold text-center mt-10">- Julien D.</p>
-          </div>
-          <div class="testimonial-slide hidden">
-            <p class="text-6xl text-gold">
-              <i class="fa-solid fa-quote-left"></i>
-            </p>
-            <p
-              class="text-center md:text-4xl text-2xl italic font-bold mt-6 px-8"
-            >
-              L’expérience a été impeccable. Vente rapide et accompagnement
-              complet du début à la fin.
-            </p>
-            <p class="font-bold text-center mt-10">- Marie L.</p>
-          </div>
-        </div>
-
-        <!-- Flèches -->
-        <button
-          id="prev"
-          class="absolute left-0 top-1/2 -translate-y-1/2 text-4xl text-gold"
-        >
-          <i class="fa-solid fa-chevron-left"></i>
-        </button>
-        <button
-          id="next"
-          class="absolute right-0 top-1/2 -translate-y-1/2 text-4xl text-gold"
-        >
-          <i class="fa-solid fa-chevron-right"></i>
-        </button>
-
-        <!-- Ronds -->
-        <div id="dots" class="flex justify-center gap-3 mt-6">
-          <span
-            class="dot w-4 h-4 rounded-full bg-gray-400 cursor-pointer"
-          ></span>
-          <span
-            class="dot w-4 h-4 rounded-full bg-gray-400 cursor-pointer"
-          ></span>
-          <span
-            class="dot w-4 h-4 rounded-full bg-gray-400 cursor-pointer"
-          ></span>
-        </div>
-      </div>
-    </section>
-
-    <!-- A PROPOS -->
-    <section id="about" class="about bg-dark-blue text-white py-40">
-      <div class="container">
-        <div class="flex lg:flex-row flex-col items-center gap-10">
-          <div class="lg:w-1/2 w-full">
-            <img class="rounded-4xl" src="img/team.avif" />
-          </div>
-          <div class="lg:w-1/2 w-full flex flex-col gap-6">
-            <h2 class="font-h2-clamp">
-              Une <span class="text-gold">équipe locale</span> à votre écoute
-            </h2>
-            <p>
-              Notre agence immobilière accompagne les propriétaires et les
-              acheteurs dans leurs projets immobiliers depuis plusieurs années.
-            </p>
-
-            <p>
-              <span class="font-bold">Notre mission est simple</span> : vous
-              offrir un accompagnement personnalisé, transparent et efficace
-              afin de concrétiser votre projet dans les meilleures conditions.
-            </p>
-
-            <p>
-              Grâce à notre parfaite connaissance du marché local et à notre
-              réseau d’acquéreurs qualifiés, nous mettons tout en œuvre pour
-              vendre votre bien rapidement et au meilleur prix.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- FAQ -->
-    <section class="faq py-40">
-      <div class="container">
-        <div>
-          <div class="mb-10">
-            <h2 class="font-h2-clamp">FAQ<span class="text-gold">.</span></h2>
-          </div>
-          <!-- Accordeons -->
-          <div class="space-y-4">
-            <!-- Question 1 -->
-            <div class="faq-item border-b border-slate">
-              <button
-                class="faq-question w-full text-left py-4 flex justify-between items-center font-medium text-lg"
-              >
-                Combien coûte une estimation immobilière ?
-                <span class="faq-icon text-gold">+</span>
-              </button>
-              <div
-                class="faq-answer max-h-0 overflow-hidden transition-all duration-300 text-slate"
-              >
-                L’estimation de votre bien est totalement gratuite et sans
-                engagement.
-              </div>
-            </div>
-
-            <!-- Question 2 -->
-            <div class="faq-item border-b border-slate">
-              <button
-                class="faq-question w-full text-left py-4 flex justify-between items-center font-medium text-lg"
-              >
-                Combien de temps faut-il pour vendre un bien ?
-                <span class="faq-icon text-gold">+</span>
-              </button>
-              <div
-                class="faq-answer max-h-0 overflow-hidden transition-all duration-300 text-slate"
-              >
-                Le délai de vente dépend du marché et du prix du bien, mais la
-                plupart de nos biens se vendent entre 30 et 60 jours.
-              </div>
-            </div>
-
-            <!-- Question 3 -->
-            <div class="faq-item border-b border-slate">
-              <button
-                class="faq-question w-full text-left py-4 flex justify-between items-center font-medium text-lg"
-              >
-                Dois-je être présent lors des visites ?
-                <span class="faq-icon text-gold">+</span>
-              </button>
-              <div
-                class="faq-answer max-h-0 overflow-hidden transition-all duration-300 text-slate"
-              >
-                Non, notre équipe peut gérer les visites pour vous afin de
-                faciliter l’organisation et de qualifier les acheteurs.
-              </div>
-            </div>
-
-            <!-- Question 4 -->
-            <div class="faq-item border-b border-slate">
-              <button
-                class="faq-question w-full text-left py-4 flex justify-between items-center font-medium text-lg"
-              >
-                Sur quels sites mon bien sera-t-il diffusé ?
-                <span class="faq-icon text-gold">+</span>
-              </button>
-              <div
-                class="faq-answer max-h-0 overflow-hidden transition-all duration-300 text-slate"
-              >
-                Votre bien sera diffusé sur les principaux portails immobiliers
-                afin de maximiser sa visibilité.
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- CTA -->
-    <section id="cta" class="cta bg-dark-blue text-white py-40">
-      <div class="container">
-        <div>
-          <div class="flex justify-center flex-col items-center">
-            <h2 class="font-h2-clamp text-center">
-              Vous souhaitez
-              <span class="text-gold">vendre votre bien</span>
-              immobilier ?
-            </h2>
-            <p class="text-center">
-              Contactez notre agence dès aujourd’hui pour obtenir une estimation
-              gratuite et découvrir la valeur de votre bien.
-            </p>
-            <div class="mt-10 text-center md:hidden inline-block">
-              <a href="#cta" class="gold-to-slate-btn py-2 px-4 rounded-lg"
-                >Estimation gratuite
-              </a>
-            </div>
-            <div class="mt-10 text-center md:inline-block hidden">
-              <a href="#cta" class="gold-to-slate-btn py-2 px-4 rounded-lg"
-                >Demander une estimation gratuite
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+      </section>
+    </main>
 
     <!-- FOOTER -->
     <footer class="bg-dark-blue text-white md:p-20 p-16">
@@ -579,23 +721,34 @@
             entre technologie et expertise humaine.
           </p>
           <div class="text-2xl">
-            <a class="hover:text-slate" href="#"
+            <a class="hover:text-slate" href="#" aria-label="facebook"
               ><i class="fa-brands fa-facebook"></i
             ></a>
-            <a class="hover:text-slate" href="#"
+            <a class="hover:text-slate" href="#" aria-label="instagram"
               ><i class="fa-brands fa-instagram"></i
             ></a>
-            <a class="hover:text-slate" href="#"
+            <a class="hover:text-slate" href="#" aria-label="youtube"
               ><i class="fa-brands fa-youtube"></i
             ></a>
           </div>
         </div>
         <div class="md:w-1/4 w-full flex flex-col gap-3">
           <p class="tracking-widest text-gold text-sm uppercase">Navigation</p>
-          <a class="hover:text-slate" href="#real-estate">Nos biens en vente</a>
-          <a class="hover:text-slate" href="#services">L'expertise</a>
-          <a class="hover:text-slate" href="#about">Notre Agence</a>
-          <a class="hover:text-slate" href="#cta">Contact</a>
+          <a
+            class="hover:text-slate"
+            aria-label="Nos biens en vente"
+            href="#real-estate"
+            >Nos biens en vente</a
+          >
+          <a class="hover:text-slate" aria-label="L'expertise" href="#services"
+            >L'expertise</a
+          >
+          <a class="hover:text-slate" aria-label="Notre Agence" href="#about"
+            >Notre Agence</a
+          >
+          <a class="hover:text-slate" aria-label="Contact" href="#cta"
+            >Contact</a
+          >
         </div>
         <div class="md:w-1/4 w-full flex flex-col gap-3">
           <p class="tracking-widest text-gold text-sm uppercase">
@@ -607,7 +760,10 @@
             class="border border-gold border-1 rounded-full p-2"
           />
           <div class="mt-4">
-            <a href="#" class="text-xl gold-to-slate-btn py-2 px-4 rounded-lg"
+            <a
+              href="#"
+              class="text-xl gold-to-slate-btn py-2 px-4 rounded-lg"
+              aria-label="Recevez nos opportunités Off-Market en priorité."
               ><i class="fa-solid fa-arrow-right"></i
             ></a>
           </div>
@@ -620,8 +776,10 @@
           <p>© 2026 L'AGENCE IMMOBILIÈRE DE PRESTIGE.</p>
         </div>
         <div class="flex md:flex-row flex-col justify-center gap-4">
-          <a href="#" class="hover:text-gold">Confidentialité</a>
-          <a href="#" class="hover:text-gold">Cookie</a>
+          <a href="#" aria-label="Confidentialité" class="hover:text-gold"
+            >Confidentialité</a
+          >
+          <a href="#" aria-label="Cookie" class="hover:text-gold">Cookie</a>
         </div>
       </div>
     </footer>
@@ -633,6 +791,7 @@
         --color-gold: #d4af37;
         --color-stone: #f8fafc;
         --color-slate: #475569;
+        --color-light-slate: #475569;
       }
     </style>
   </body>

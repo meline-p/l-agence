@@ -3,6 +3,7 @@
   --color-gold: #d4af37;
   --color-stone: #f8fafc;
   --color-slate: #475569;
+  --color-light-slate: #98a1ad;
   --color-white: #fff;
 
   --color-dark-blue-rgba-0: rgba(15, 23, 42, 0);
@@ -79,7 +80,9 @@ h3 {
   color: var(--color-white);
   background-color: var(--color-gold);
   border: 1px solid var(--color-gold);
-  transition: background-color 0.3s ease, transform 0.2s ease;
+  transition:
+    background-color 0.3s ease,
+    transform 0.2s ease;
   text-transform: uppercase;
 }
 .gold-btn:hover {
@@ -92,7 +95,9 @@ h3 {
   color: var(--color-white);
   background-color: var(--color-gold);
   border: 1px solid var(--color-gold);
-  transition: background-color 0.3s ease, transform 0.2s ease;
+  transition:
+    background-color 0.3s ease,
+    transform 0.2s ease;
   text-transform: uppercase;
 }
 .gold-to-slate-btn:hover {
@@ -107,7 +112,9 @@ h3 {
   color: var(--color-white);
   background-color: var(--color-dark-blue);
   border: 1px solid var(--color-dark-blue);
-  transition: background-color 0.3s ease, transform 0.2s ease;
+  transition:
+    background-color 0.3s ease,
+    transform 0.2s ease;
   text-transform: uppercase;
 }
 .dark-blue-btn:hover {
@@ -128,7 +135,8 @@ h3 {
 /*************************************/
 
 .hero-bg-img {
-  background-image: linear-gradient(
+  background-image:
+    linear-gradient(
       to right,
       rgba(15, 23, 42, 0.8) 30%,
       rgba(15, 23, 42, 0.6) 100%
