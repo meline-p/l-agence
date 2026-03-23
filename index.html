@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -79,7 +79,7 @@
     </div>
 
     <header
-      class="fixed top-0 left-0 w-full z-50 bg-stone p-6 shadow-lg text-dark-blue"
+      class="opacity-0 realestate-animation fixed top-0 left-0 w-full z-50 bg-stone p-6 shadow-lg text-dark-blue"
     >
       <div class="flex justify-between items-center">
         <!-- Logo -->
@@ -151,24 +151,30 @@
     <main>
       <!-- HERO -->
       <section
-        class="hero hero-bg-img md:h-dvh min-h-screen md:py-0 py-20"
+        class="snap-start scroll-section hero hero-bg-img md:h-dvh min-h-screen md:py-0 py-20"
         aria-label="Hero"
       >
         <div class="container min-h-screen flex flex-col justify-center">
-          <div class="flex flex-col justify-center items-center text-center">
-            <h1 class="font-h1-clamp pb-6">
-              Vendez votre bien immobilier
-              <span class="text-gold">rapidement et au meilleur prix.</span>
-            </h1>
+          <div
+            class="opacity-0 realestate-animation delay-1 flex flex-col justify-center items-center text-center"
+          >
+            <div class="opacity-0 realestate-animation delay-1">
+              <h1 class="font-h1-clamp pb-6">
+                Vendez votre bien immobilier
+                <span class="text-gold">rapidement et au meilleur prix.</span>
+              </h1>
+            </div>
 
-            <p class="md:text-2xl text-md text-white">
-              Notre agence vous accompagne à chaque étape de votre projet
-              immobilier, de l’estimation à la signature chez le notaire.
-            </p>
+            <div class="opacity-0 realestate-animation delay-2">
+              <p class="md:text-2xl text-md text-white">
+                Notre agence vous accompagne à chaque étape de votre projet
+                immobilier, de l’estimation à la signature chez le notaire.
+              </p>
+            </div>
           </div>
 
           <div
-            class="w-full bg-white flex md:flex-row flex-col gap-8 py-6 px-10 md:rounded-full rounded-2xl mt-10"
+            class="opacity-0 realestate-animation delay-3 w-full bg-white flex md:flex-row flex-col gap-8 py-6 px-10 md:rounded-full rounded-2xl mt-10"
           >
             <div class="grow flex flex-col">
               <label class="uppercase text-slate mb-2" for="city">Ville</label>
@@ -208,34 +214,37 @@
       </section>
 
       <!-- CHIFFRES -->
-      <section class="numbers py-40" aria-label="Chiffres">
+      <section
+        class="snap-start scroll-section numbers py-40"
+        aria-label="Chiffres"
+      >
         <div class="container">
           <div
             class="flex justify-center flex-wrap md:flex-nowrap items-center gap-8 w-full"
           >
             <div
-              class="bg-white shadow-lg p-8 rounded-4xl flex justify-center flex-col items-center w-full"
+              class="animate-on-scroll bg-white shadow-lg p-8 rounded-4xl flex justify-center flex-col items-center w-full"
             >
               <p class="text-4xl font-bold mb-2">12+</p>
               <p class="uppercase text-slate">Années d'Expérience</p>
             </div>
 
             <div
-              class="bg-white shadow-lg p-8 rounded-4xl flex justify-center flex-col items-center text-gold w-full"
+              class="animate-on-scroll delay-1 bg-white shadow-lg p-8 rounded-4xl flex justify-center flex-col items-center text-gold w-full"
             >
               <p class="text-4xl font-bold mb-2">450</p>
               <p class="uppercase">Ventes de Prestige</p>
             </div>
 
             <div
-              class="bg-white shadow-lg p-8 rounded-4xl flex justify-center flex-col items-center w-full"
+              class="animate-on-scroll delay-2 bg-white shadow-lg p-8 rounded-4xl flex justify-center flex-col items-center w-full"
             >
               <p class="text-4xl font-bold mb-2">98%</p>
               <p class="uppercase text-slate">Clients satisfaits</p>
             </div>
 
             <div
-              class="bg-white shadow-lg p-8 rounded-4xl flex justify-center flex-col items-center text-gold w-full"
+              class="animate-on-scroll delay-3 bg-white shadow-lg p-8 rounded-4xl flex justify-center flex-col items-center text-gold w-full"
             >
               <p class="text-4xl font-bold mb-2">1.2M</p>
               <p class="uppercase">Volume de ventes</p>
@@ -247,12 +256,12 @@
       <!-- BIENS IMMOBILIERS -->
       <section
         id="real-estate"
-        class="real-estate border-t-1 border-gold py-40"
+        class="snap-start scroll-section real-estate border-t-1 border-gold py-40 "
         aria-label="Biens immobiliers"
       >
         <div class="container">
           <div>
-            <div>
+            <div class="animate-on-scroll">
               <h2 class="font-h2-clamp">
                 LA COLLECTION <span class="text-gold">PRIVATE.</span>
               </h2>
@@ -264,7 +273,7 @@
             <div class="flex xl:flex-row flex-col gap-8 my-10">
               <!-- Immo 1 -->
               <div
-                class="flex xl:flex-row flex-col rounded-4xl bg-white shadow-lg xl:w-1/2 w-full overflow-hidden"
+                class="animate-on-scroll delay-1 flex xl:flex-row flex-col rounded-4xl bg-white shadow-lg xl:w-1/2 w-full overflow-hidden"
               >
                 <div class="xl:w-1/2 w-full">
                   <img
@@ -299,7 +308,7 @@
 
               <!-- Immo 2 -->
               <div
-                class="flex xl:flex-row flex-col rounded-4xl bg-white shadow-lg xl:w-1/2 w-full overflow-hidden"
+                class="animate-on-scroll delay-2 flex xl:flex-row flex-col rounded-4xl bg-white shadow-lg xl:w-1/2 w-full overflow-hidden"
               >
                 <div class="xl:w-1/2 w-full">
                   <img
@@ -332,7 +341,7 @@
                 </div>
               </div>
             </div>
-            <div class="text-center mt-20">
+            <div class="text-center mt-20 animate-on-scroll delay-3">
               <div>
                 <a
                   href="#real-estate"
@@ -349,12 +358,12 @@
       <!-- SERVICES -->
       <section
         id="services"
-        class="services bg-dark-blue text-white py-40"
+        class="snap-start scroll-section services bg-dark-blue text-white py-40"
         aria-label="Services"
       >
         <div class="container">
           <div>
-            <div class="mb-10">
+            <div class="mb-10 animate-on-scroll">
               <h2 class="font-h2-clamp">
                 Nos <span class="text-gold">services</span> immobiliers
               </h2>
@@ -371,7 +380,7 @@
               <!-- Colonne des services -->
               <div class="flex flex-col gap-8 my-10 xl:w-2/3 w-full">
                 <!-- Chaque service -->
-                <div class="flex items-start gap-6">
+                <div class="animate-on-scroll delay-1 flex items-start gap-6">
                   <div class="border border-gold rounded-xl p-4">
                     <i class="text-xl text-gold fa-solid fa-money-bills"></i>
                   </div>
@@ -386,7 +395,7 @@
                   </div>
                 </div>
 
-                <div class="flex items-start gap-6">
+                <div class="animate-on-scroll delay-2 flex items-start gap-6">
                   <div class="border border-gold rounded-xl p-4">
                     <i class="text-xl text-gold fa-solid fa-star"></i>
                   </div>
@@ -401,7 +410,7 @@
                   </div>
                 </div>
 
-                <div class="flex items-start gap-6">
+                <div class="animate-on-scroll delay-3 flex items-start gap-6">
                   <div class="border border-gold rounded-xl p-4">
                     <i class="text-xl text-gold fa-solid fa-key"></i>
                   </div>
@@ -415,7 +424,7 @@
                   </div>
                 </div>
 
-                <div class="flex items-start gap-6">
+                <div class="animate-on-scroll delay-4 flex items-start gap-6">
                   <div class="border border-gold rounded-xl p-4">
                     <i class="text-xl text-gold fa-solid fa-comments"></i>
                   </div>
@@ -428,7 +437,9 @@
                     </p>
                   </div>
                 </div>
-                <div class="text-center md:hidden inline-block">
+                <div
+                  class="text-center md:hidden inline-block animate-on-scroll delay-5"
+                >
                   <a
                     href="#cta"
                     class="gold-to-slate-btn py-2 px-4 rounded-lg"
@@ -436,7 +447,9 @@
                     >Estimation gratuite
                   </a>
                 </div>
-                <div class="text-center md:inline-block hidden">
+                <div
+                  class="text-center md:inline-block hidden animate-on-scroll delay-6"
+                >
                   <a
                     href="#cta"
                     class="gold-to-slate-btn py-2 px-4 rounded-lg"
@@ -447,7 +460,9 @@
               </div>
 
               <!-- Colonne image -->
-              <div class="xl:w-1/3 w-full flex">
+              <div
+                class="xl:w-1/3 w-full flex animate-on-scroll delay-7"
+              >
                 <img
                   class="h-full w-full object-cover rounded-4xl aspect-[3/2]"
                   src="img/key.avif"
@@ -465,10 +480,10 @@
       <!-- AVIS -->
       <section
         id="testimonials"
-        class="testimonials py-40 relative"
+        class="snap-start scroll-section testimonials py-40 relative"
         aria-label="Avis"
       >
-        <div class="container relative">
+        <div class="container relative animate-on-scroll">
           <!-- Témoignages -->
           <div id="testimonial-wrapper" class="overflow-hidden relative">
             <div
@@ -546,12 +561,12 @@
       <!-- A PROPOS -->
       <section
         id="about"
-        class="about bg-dark-blue text-white py-40"
+        class="snap-start scroll-section about bg-dark-blue text-white py-40"
         aria-label="A propos"
       >
         <div class="container">
           <div class="flex lg:flex-row flex-col items-center gap-10">
-            <div class="lg:w-1/2 w-full">
+            <div class="lg:w-1/2 w-full  animate-on-scroll">
               <img
                 class="h-full w-full rounded-4xl aspect-[3/2]"
                 src="img/team.avif"
@@ -561,7 +576,9 @@
                 loading="lazy"
               />
             </div>
-            <div class="lg:w-1/2 w-full flex flex-col gap-6">
+            <div
+              class="lg:w-1/2 w-full flex flex-col gap-6 animate-on-scroll delay-1"
+            >
               <h2 class="font-h2-clamp">
                 Une <span class="text-gold">équipe locale</span> à votre écoute
               </h2>
@@ -588,9 +605,9 @@
       </section>
 
       <!-- FAQ -->
-      <section class="faq py-40" aria-label="FAQ">
+      <section class="snap-start scroll-section faq py-40" aria-label="FAQ">
         <div class="container">
-          <div>
+          <div class="animate-on-scroll">
             <div class="mb-10">
               <h2 class="font-h2-clamp">FAQ<span class="text-gold">.</span></h2>
             </div>
@@ -671,22 +688,30 @@
       <!-- CTA -->
       <section
         id="cta"
-        class="cta bg-dark-blue text-white py-40"
+        class="snap-start scroll-section cta bg-dark-blue text-white py-40"
         aria-label="Contact"
       >
         <div class="container">
           <div>
             <div class="flex justify-center flex-col items-center">
-              <h2 class="font-h2-clamp text-center">
-                Vous souhaitez
-                <span class="text-gold">vendre votre bien</span>
-                immobilier ?
-              </h2>
-              <p class="text-center">
-                Contactez notre agence dès aujourd’hui pour obtenir une
-                estimation gratuite et découvrir la valeur de votre bien.
-              </p>
-              <div class="mt-10 text-center md:hidden inline-block">
+              <div class="animate-on-scroll">
+                <h2 class="font-h2-clamp text-center">
+                  Vous souhaitez
+                  <span class="text-gold">vendre votre bien</span>
+                  immobilier ?
+                </h2>
+              </div>
+
+              <div class="animate-on-scroll delay-1">
+                <p class="text-center">
+                  Contactez notre agence dès aujourd’hui pour obtenir une
+                  estimation gratuite et découvrir la valeur de votre bien.
+                </p>
+              </div>
+
+              <div
+                class="mt-10 text-center md:hidden inline-block animate-on-scroll delay-2"
+              >
                 <a
                   href="#cta"
                   class="gold-to-slate-btn py-2 px-4 rounded-lg"
@@ -694,7 +719,9 @@
                   >Estimation gratuite
                 </a>
               </div>
-              <div class="mt-10 text-center md:inline-block hidden">
+              <div
+                class="mt-10 text-center md:inline-block hidden animate-on-scroll delay-2"
+              >
                 <a
                   href="#cta"
                   class="gold-to-slate-btn py-2 px-4 rounded-lg"
@@ -709,9 +736,11 @@
     </main>
 
     <!-- FOOTER -->
-    <footer class="bg-dark-blue text-white md:p-20 p-16">
+    <footer class="scroll-section bg-dark-blue text-white md:p-20 p-16">
       <div class="flex md:flex-row flex-col items-start gap-10">
-        <div class="md:w-2/4 w-full flex flex-col gap-4">
+        <div
+          class="md:w-2/4 w-full flex flex-col gap-4 animate-on-scroll delay-3"
+        >
           <h2 class="font-brand-clamp">
             L'Agence<span class="text-gold">.</span>
           </h2>
@@ -732,7 +761,9 @@
             ></a>
           </div>
         </div>
-        <div class="md:w-1/4 w-full flex flex-col gap-3">
+        <div
+          class="md:w-1/4 w-full flex flex-col gap-3 animate-on-scroll delay-4"
+        >
           <p class="tracking-widest text-gold text-sm uppercase">Navigation</p>
           <a
             class="hover:text-slate"
@@ -750,7 +781,9 @@
             >Contact</a
           >
         </div>
-        <div class="md:w-1/4 w-full flex flex-col gap-3">
+        <div
+          class="md:w-1/4 w-full flex flex-col gap-3 animate-on-scroll delay-5"
+        >
           <p class="tracking-widest text-gold text-sm uppercase">
             Inscriptions
           </p>
@@ -770,7 +803,7 @@
         </div>
       </div>
       <div
-        class="border-t-1 border-slate pt-8 mt-8 md:pb-0 pb-10 flex md:flex-row gap-4 flex-col justify-between text-slate"
+        class="animate-on-scroll delay-6 border-t-1 border-slate pt-8 mt-8 md:pb-0 pb-10 flex md:flex-row gap-4 flex-col justify-between text-slate"
       >
         <div class="">
           <p>© 2026 L'AGENCE IMMOBILIÈRE DE PRESTIGE.</p>

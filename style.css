@@ -19,13 +19,13 @@
 /************* GENERAL ***************/
 /*************************************/
 html {
-  /* scroll-snap-type: y mandatory; */
+  scroll-snap-type: y mandatory;
   scroll-behavior: smooth;
 }
-/* 
+
 section {
   scroll-snap-align: start;
-} */
+}
 
 body {
   font-family: "Inter", sans-serif;
@@ -130,9 +130,9 @@ h3 {
   padding-right: 16px;
 }
 
-/*************************************/
+/**********************************/
 /************* HERO ***************/
-/*************************************/
+/**********************************/
 
 .hero-bg-img {
   background-image:
@@ -146,4 +146,59 @@ h3 {
   background-size: cover;
   background-repeat: no-repeat;
   background-clip: border-box;
+}
+
+/****************************************/
+/************* ANIMATIONS ***************/
+/****************************************/
+
+@keyframes realEstateSlide {
+  0% {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+
+  70% {
+    opacity: 1;
+    transform: translateX(5px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.realestate-animation {
+  animation: realEstateSlide 0.8s ease-out forwards;
+}
+
+.delay-1 {
+  animation-delay: 0.4s;
+}
+.delay-2 {
+  animation-delay: 0.8s;
+}
+.delay-3 {
+  animation-delay: 1.2s;
+}
+.delay-4 {
+  animation-delay: 1.8s;
+}
+.delay-5 {
+  animation-delay: 2.2s;
+}
+.delay-6 {
+  animation-delay: 2.8s;
+}
+.delay-7 {
+  animation-delay: 3.2s;
+}
+
+.animate-on-scroll {
+  opacity: 0;
+}
+
+.animate-on-scroll.visible {
+  animation: realEstateSlide 0.3s forwards;
 }

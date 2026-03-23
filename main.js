@@ -72,3 +72,21 @@ faqItems.forEach((item) => {
   });
 });
 
+//////////// ANIMATIONS ////////////
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const children = entry.target.querySelectorAll('.animate-on-scroll');
+      children.forEach((child, i) => {
+        child.style.animationDelay = `${i * 0.4}s`; 
+        child.classList.add('visible');
+      });
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.3 }); 
+
+document.querySelectorAll('.scroll-section').forEach(section => {
+  observer.observe(section);
+});
