@@ -152,6 +152,15 @@ h3 {
 /************* ANIMATIONS ***************/
 /****************************************/
 
+.house-item {
+  transform: scale(1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.house-item:hover {
+  transform: scale(1.05);
+}
+
 @keyframes realEstateSlide {
   0% {
     opacity: 0;
@@ -200,5 +209,5 @@ h3 {
 }
 
 .animate-on-scroll.visible {
-  animation: realEstateSlide 0.3s forwards;
+  animation: realEstateSlide 0.8s forwards;
 }
